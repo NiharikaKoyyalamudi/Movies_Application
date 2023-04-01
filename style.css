@@ -1,0 +1,82 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:rgba(0, 0, 0, 0.895);
+  padding: 20px;
+}
+.input {
+  height: 50px;
+  width: 600px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.button {
+  height: 60px;
+  padding: 5px 10px;
+  border: none;
+  background-color: olivedrab;
+  color: white;
+  cursor: pointer;
+  width :100px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: green;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+.movie {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.movie:hover .overlay {
+  opacity: 1;
+}
+
+.movie .overlay h3 {
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.movie .overlay p {
+  color: white;
+  font-size: 16px;
+  margin: 10px;
+}
